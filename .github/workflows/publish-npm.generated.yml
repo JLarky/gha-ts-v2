@@ -23,7 +23,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v5
       - name: Install mise
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
       - name: Publish package
         run: |
           mise run clone-to-npm:ci --publish --ci -d "$RUNNER_TEMP"
