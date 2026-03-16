@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Run reviewdog/action-actionlint
         uses: reviewdog/action-actionlint@v1
         with:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: store .github/actionlint-matcher.json
         env:
           ACTIONLINT_MATCHER_JSON: "{\"problemMatcher\":[{\"owner\":\"actionlint\",\"pattern\":[{\"regexp\":\"^(?:\\\\x1b\\\\[\\\\d+m)?(.+?)(?:\\\\x1b\\\\[\\\\d+m)*:(?:\\\\x1b\\\\[\\\\d+m)*(\\\\d+)(?:\\\\x1b\\\\[\\\\d+m)*:(?:\\\\x1b\\\\[\\\\d+m)*(\\\\d+)(?:\\\\x1b\\\\[\\\\d+m)*: (?:\\\\x1b\\\\[\\\\d+m)*(.+?)(?:\\\\x1b\\\\[\\\\d+m)* \\\\[(.+?)\\\\]$\",\"file\":1,\"line\":2,\"column\":3,\"message\":4,\"code\":5}]}]}"
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Bun install
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Bun install
@@ -73,7 +73,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Bun install
@@ -85,7 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Dry run publish package
@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Run the test
@@ -106,7 +106,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Install Node.js
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install mise
         uses: jdx/mise-action@v3
       - name: Install dependencies
