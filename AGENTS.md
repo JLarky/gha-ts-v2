@@ -1,5 +1,11 @@
 ## Project: gha-ts
 
+This repository uses the **Night Shift** workflow.
+- **Workflow Instructions:** See [@AGENT_LOOP.md](@AGENT_LOOP.md)
+- **Review Personas:** See [REVIEW_PERSONAS.md](REVIEW_PERSONAS.md)
+- **Task Specifications:** Located in `Specs/`
+- **System Documentation:** Located in `Docs/`
+
 Note: This project uses Mise and Bun instead of Node.js (npm/yarn). Use `mise run` tasks and Bun commands; see [@CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Purpose
