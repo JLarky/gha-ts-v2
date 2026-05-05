@@ -16,7 +16,7 @@ jobs:
     steps: 
       - name: Fetch dependabot metadata
         id: dependabotMetadata
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
       - name: Get dependency name
         id: dependencyName
         run: "echo '${{ steps.dependabotMetadata.outputs.updated-dependencies-json }}' > deps.json\ndependency_name=$(jq -r '.[0].dependencyName' deps.json)\nprevious_version=$(jq -r '.[0].prevVersion' deps.json)\nnew_version=$(jq -r '.[0].newVersion' deps.json)\necho \"previous-dependency-name=$dependency_name@v$previous_version\" >> $GITHUB_OUTPUT\necho \"new-dependency-name=$dependency_name@v$new_version\" >> $GITHUB_OUTPUT"
